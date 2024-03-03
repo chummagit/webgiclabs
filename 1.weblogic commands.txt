@@ -1,0 +1,245 @@
+
+Linux commands
+=============== 
+netstat -an | grep 1621
+netstat –tulpn | grep 9003
+free -h 
+top -c
+number of files used by mwadnin:
+lsof -u mwadmin |wc -l
+Free -g
+free -m
+lscpu
+
+
+
+
+22/07/2021
+============
+rigistory.xml
+setDomainenv.sh
+SetNMJavahome.sh
+nodemanager.properties
+============================================================================================================
+ NODEMANAGER
+
+/Weblogic/Oracle/Middleware/Oracle_Home/user_projects/domains/IGTBSTG_REPORT/servers/ARX_DTB/data/nodemanager
+ARX_DTB.state---->edit file
+SHUTDOWN:Y:N
+save chestey console refresh chestey shudown ki poyindhi
+===================================================================================================================================================
+nslookup YBDEL3V029OW01
+  208  cp -pr startManagedWebLogic.sh startManagedWebLogic.sh_bkp_24Feb22
+  209  cp -pr startWebLogic.sh startWebLogic.sh_bkp_24Feb
+  210  nano startWebLogic.sh
+  211  vi startWebLogic.sh
+================================================================================================================================================
+number of open connections:
+  goto to data source/
+=================================================================================================================================================
+THREAD DUMP:
+in windows:
+to check PID go to below path
+D:\weblogic\Oracle\Middleware\Oracle_Home\user_projects\domains\Newgen\servers\Newgen-1\data\nodemanager
+To execute Thread dump
+go to D:\Java\JDK\bin
+jstack.exe -l 12384 >> \weblogic\UPI_Financial1_1.txt
+
+10.177.50.0
+10.177.50.13/
+10.177.50.15_OUTFinancial2Prod1 
+
+/weblogic/java/jdk1.8.0_152/bin
+./jstack -l 2637706 > /weblogic/OUTFinancial2Prod1_1.txt
+ ./jstack -l 59787 > /weblogic/FCCoreBatch1RepProd1.txt
+
+Heap Dump:
+/weblogic/java/jdk1.8.0_152/bin
+./jmap -dump:live,format=b,file=/weblogic/NEFT3-IN.hprof  25089
+============================================================================================================
+1.OS Version :
+less /etc/redhat-release
+
+Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+2.The JDBC Driver Versions 
+
+ps -ef | grep java
+ cd /weblogic_New/jdk1.8.0_221-amd64/bin/
+ ./java -jar /weblogic_New/Oracle/Middleware/Oracle_Home/oracle_common/modules/oracle.jdbc/ojdbc8.jar
+
+ 
+3.To check java weblogic version :
+
+cd /weblogic/Oracle/Middleware/Oracle_Home/wlserver/server/lib
+
+java -cp weblogic.jar weblogic.version
+
+WebLogic Server 12.2.1.3.0
+
+Free -g
+free -m
+lscpu
+
+cache /buffer reserves first and used by different Applications and then releases .
+
+FAN enabled
+data source grid 
+
+
+====================================================================================================================================================
+/weblogic/Oracle/Middleware/oracle_common/common/bin/
+domain = "/weblogic/Oracle/Middleware/user_projects/domains/YBLUVDAKMDMAPP1"
+service = weblogic.security.internal.SerializedSystemIni.getEncryptionService(domain)
+encryption = weblogic.security.internal.encryption.ClearOrEncryptedService(service)
+print encryption.decrypt("{AES}P+vOxzCrYqx+o2COjnzw3KH6PIMNjQE7vJb/FxDDcTc=")
+
+=========================================================================================================================================
+TLS :
+
+app server path :cd  /invoicexpress/app
+
+command : java -jar TestSSLServer.jar server ip  7443
+          java -jar TestSSLServer.jar server ip  7444
+
+===================================================================================================================================================
+60.35 
+ps -ef|grep Atm1
+/usr/jdk/instances/jdk1.7.0_80/bin/jstack -l 35870 >/weblogic/Tdumps_06Aug21/Atm1Prod1_06082021_TD1.txt
+/usr/jdk/instances/jdk1.7.0_80/bin/jstack -l 35870 >/weblogic/Tdumps_06Aug21/Atm1Prod1_06082021_TD2.txt
+/usr/jdk/instances/jdk1.7.0_80/bin/jstack -l 35870 >/weblogic/Tdumps_06Aug21/Atm1Prod1_06082021_TD3.txt
+===================================================================================================================================================
+Home path     : /OHS/Oracle/Middleware    
+Domain path   : /OHS/Oracle/Middleware/Oracle_Home/user_projects/domains/OBDX_OHS
+Instance path : /OHS/Oracle/Middleware/Oracle_Home/user_projects/domains/OBDX_OHS/config/fmwconfig/components/OHS/ohs1
+
+
+=====================================================================================================================================================
+JAVA_UPGRADATION:
+
+1 stop services
+2 first take backup java folder
+3 copy java updated file
+4 tar -zxvf jdk-8u281-linux-x64.tar.gz extract war file
+5 go to cd ~
+
+6  cp -pr .bash_profile .bash_profile_bkp
+7  vi .bash_profile
+8 add java path
+9  . ./.bash_profile run bash profile
+10 change java path in
+/weblogic/Oracle/Middleware/Oracle_Home/user_projects/domains/Yesbank.com/bin ---> 1 setDomainenv,2 SetNMJavahome.sh,3 nodemanager.properties
+
+/weblogic/Oracle/Middleware/Oracle_Home/oui/bin  ---> 1 setProperty.sh,2 compareInventory.sh,
+
+11 got to  /weblogic/Oracle/Middleware/Oracle_Home/oui --change 1 .globalEnv.properties
+ls -lra
+
+11 start the services
+
+/weblogic/java/jdk1.8.0_281
+=============================================================================================================================
+
+
+SSL
+keystore:
+check and paste console_keystore path:
+keytool -import -trustcacerts -alias  2021_universeuat.yesbank.in -file  /weblogic/Oracle/Middleware/user_projects/domains/APSAPP/CERT_FOLDER/universeuat_certs/2021_universeuat.yesbank.in.cer -keystore APSAPP.jks
+keytool -import -trustcacerts -alias  2021_universeuat_root -file  /weblogic/Oracle/Middleware/user_projects/domains/APSAPP/CERT_FOLDER/universeuat_certs/2021_universeuat_root.cer -keystore APSAPP.jks
+keytool -import -trustcacerts -alias  2021_universeuat_inter -file  /weblogic/Oracle/Middleware/user_projects/domains/APSAPP/CERT_FOLDER/universeuat_certs/2021_universeuat_inter.cer -keystore APSAPP.jks
+
+trust store:
+check and paste console_truststore path:
+keytool -import -trustcacerts -alias ca_2021 -file ca.cer -keystore gem_truststore.jks
+keytool -import -trustcacerts -alias root_2021 -file root.cer -keystore gem_truststore.jks
+
+cacerts:
+goto /java/jdk/jre/lib/security
+keytool -import -trustcacerts -alias ca_2021 -file ca.cer -keystore cacerts
+keytool -import -trustcacerts -alias root_2021 -file root.cer -keystore cacerts
+====================================================================================================================================================
+weblogicb Version-->
+
+cd /weblogic/Oracle/Middleware/Oracle_Home/wlserver/server/lib/
+java -cp weblogic.jar weblogic.version
+
+ohs version -->
+ cd /OHS/Oracle/Middleware/ohs/bin --> less version.txt
+===========================================================================================================
+Patching: in weblogic----->
+
+Access to the servers , respective consoles and winscp access in PIM
+  1. security patch 
+  2. coherence patch
+  3. upgrade patch
+
+./opatch lsinv
+./opatch lspatches 
+ 
+------------------------------------   10.81.72.86
+Take backup of entire Oracle from each server to which patch will be applied
+
+cp -pr Oracle Oracle_DDMMYYYY
+------------------------------------
+1) Login into the server and console in PIM
+2) If applcaition is DC live do activity node by node , if non-live DC you can do it parallel on both nodes. Stop Services on one node then start patching
+3) Go to OPatch directory
+4) opatch apply <patchid>
+First apply security patch and later apply overlay patch
+5) Once Patch is done take screenshot of opatch lsinv
+6)Start the services if you have stopped them
+
+for 12C weblogic servers use below process
+
+****************************
+
+Apply security and Coherence  patchs using below:
+
+cd <Oracle_Home>/OPatch/
+./opatch apply <PatchName> -report
+./opatch apply <PatchName>
+-------------------------------
+./opatch lsinv
+./opatch lspatches 
+
+Incase of patch rollback rename the Oracle Backup taken and start the services.
+=======================================================================================================================================
+60.35/36
+
+dumps,logs,domain jvm start 
+ coredump path:
+ /weblogic_config/Oracle/Middleware/user_projects/domains/FCPROD_api_domain
+
+ loggs path:
+ /fchostapp/FlexcubeAPI/logs
+/weblogic_config/Oracle/Middleware/user_projects/domains/FCPROD_api_domain/servers/FCCoreApi6Prod2/logs
+
+jvm start command:
+/fchostapp/FlexcubeAPI/FCCoreApi6Prod2
+nohup ./start_api6.sh &
+
+
+60.35 
+ps -ef|grep Atm1
+/usr/jdk/instances/jdk1.7.0_80/bin/jstack -l 35870 >/weblogic/Tdumps_06Aug21/Atm1Prod1_06082021_TD1.txt
+/usr/jdk/instances/jdk1.7.0_80/bin/jstack -l 35870 >/weblogic/Tdumps_06Aug21/Atm1Prod1_06082021_TD2.txt
+/usr/jdk/instances/jdk1.7.0_80/bin/jstack -l 35870 >/weblogic/Tdumps_06Aug21/Atm1Prod1_06082021_TD3.txt
+
+47.135 logs path:
+
+
+
+/weblogic_config/Oracle/Middleware/user_projects/domains/FlexcubeHost/FCCoreBatchServer/FileStore
+
+60.35 ,47.133
+/weblogic_logs/wls_monitor/FCPROD_api_domain 
+goto logs 
+mv logs to backup file
+run ./sh file
+
+===========================================================================================================================
+ 
+
+
+
+
